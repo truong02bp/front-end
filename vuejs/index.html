@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hê lô</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <div id="app-2">
+        <span v-bind-title="message">
+            Ai thông minh hơn học sinh lớp 5
+        </span>
+    </div>
+    <div id="app-3">
+        <span v-if="condition">
+            Trường
+        </span>
+    </div>
+    <div id="app-4">
+        <li v-for="(item, index) in items" :key="index">
+            {{item.text}}
+        </li>
+    </div>
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Nhấn vào đây</button>
+    </div>
+    <div id="app-6">
+        <p>{{message}}</p>
+        <input v-model="message" >
+    </div>
+    <script src="demo.js"></script>
+</body>
+</html>
